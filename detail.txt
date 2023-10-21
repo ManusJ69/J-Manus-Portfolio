@@ -1,0 +1,19 @@
+- edit website
+	/ เว็บโรงบาลพี่อะไรสักอย่าง
+	/ เว็บลูกค้าพี่หนึ่ง
+	/ เว็บบริษัท
+- co-project website
+	/ ราคา/ดีไซน์/ประสานรายละเอียด
+- budget manage: online ads campaign
+	/ ant commerce
+	/ ant game world
+	/ ultimate game
+- digital ad: budget/ads/report
+	/ ant commerce
+	/ ant game world
+	/ ultimate game
+- ad optimize
+	/ memorise
+	/ ant commerce
+	/ ant game world
+	/ ultimate game
