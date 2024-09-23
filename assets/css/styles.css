@@ -513,6 +513,10 @@ img {
   width: 80%;
 }
 
+.skills__bar__all {
+  width: 0%;
+}
+
 .skills__fb__ad {
   width: 75%;
 }
