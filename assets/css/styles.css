@@ -1090,9 +1090,20 @@ img {
   }
 }
 
+@media screen and (max-width: 430px) {
+  .about__description {
+    margin-bottom: 0.5rem;
+    font-size: x-small;
+  }
+
+  .about__container {
+    margin-bottom: var(--mb-2);
+  }
+
+}
+
 /* For medium devices */
 @media screen and (min-width: 568px) {
-
  
   .home__content {
     grid-template-columns: max-content 1fr 1fr;
