@@ -73,7 +73,7 @@
 body.dark-theme {
   --first-color-second: hsl(var(--hue-color), 30%, 8%);
   --title-color: hsl(var(--hue-color), 8%, 95%);
-  --text-color: hsl(var(--hue-color), 8%, 75%);
+  --text-color: hsl(var(--hue-color), 9%, 60%);
   --input-color: hsl(var(--hue-color), 29%, 16%);
   --body-color: hsl(var(--hue-color), 28%, 12%);
   --container-color: hsl(var(--hue-color), 29%, 16%);
@@ -119,9 +119,13 @@ body {
 
 h1,
 h2,
-h3,
-h4 {
+h3{
   color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+h4{
+  
   font-weight: var(--font-semi-bold);
 }
 
@@ -136,6 +140,72 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.table-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 ตารางใน 1 แถว */
+  gap: 10px; /* ระยะห่างระหว่างตาราง */
+}
+
+.table {
+  display: grid;
+  grid-template-rows: repeat(3, auto); /* 3 แถวในแต่ละตาราง */
+  gap: 20px; /* ระยะห่างระหว่างแถว */
+  background-color: #f9f9f9; /* สีพื้นหลังของตาราง */
+  border: 1px solid #ddd; /* เส้นขอบของตาราง */
+  padding: 15px;
+  border-radius: 8px; /* มุมโค้งมนของตาราง */
+}
+
+.table-header {
+  background-color: #003771; /* สีพื้นหลังของหัวตาราง */
+  color: white; /* สีข้อความในหัวตาราง */
+  padding: 10px 15px; /* ขนาดของพื้นที่หัวตาราง */
+  border-radius: 8px; /* มุมโค้งมนของหัวตาราง */
+  text-align: center; /* จัดตำแหน่งข้อความให้อยู่กลาง */
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 คอลัมน์ในแต่ละแถว */
+  gap: 10px; /* ระยะห่างระหว่างคอลัมน์ */
+}
+
+.image-column img {
+  width: 100%; /* ปรับขนาดรูปให้เต็มความกว้างของคอลัมน์ */
+  height: auto; /* คงอัตราส่วนของรูป */
+  border-radius: 8px; /* มุมโค้งมนของรูป */
+}
+
+.content-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* จัดตำแหน่งข้อความให้อยู่กลาง */
+  align-items: flex-start; /* จัดตำแหน่งปุ่มให้อยู่ซ้าย */
+}
+
+.content-column p {
+  margin-bottom: 15px; /* ระยะห่างระหว่างข้อความกับปุ่ม */
+  font-size: 16px; /* ขนาดตัวอักษร */
+}
+
+.button-link {
+  text-decoration: none; /* ลบขีดเส้นใต้ลิงค์ */
+}
+
+.content-column button {
+  padding: 10px 20px; /* ขนาดของปุ่ม */
+  background-color: #007BFF; /* สีพื้นหลังของปุ่ม */
+  color: white; /* สีข้อความในปุ่ม */
+  border: none;
+  border-radius: 5px; /* มุมโค้งมนของปุ่ม */
+  cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อชี้ไปที่ปุ่ม */
+  transition: background-color 0.3s ease; /* เพิ่มการเปลี่ยนสีเมื่อชี้ */
+}
+
+.content-column button:hover {
+  background-color: #0056b3; /* เปลี่ยนสีเมื่อวางเมาส์เหนือปุ่ม */
 }
 
 /*==================== REUSABLE CSS CLASSES ====================*/
@@ -1100,6 +1170,10 @@ img {
     margin-bottom: var(--mb-2);
   }
 
+  .table-container {
+    grid-template-columns: 1fr; /* แสดง 1 ตารางใน 1 แถว */
+  }
+
 }
 
 /* For medium devices */
@@ -1319,6 +1393,10 @@ img {
     margin-left: var(--mb-1-5);
     margin-right: var(--mb-1-5);
     font-size: smaller;
+  }
+
+  .table-container {
+    grid-template-columns: repeat(3, 1fr); /* แสดง 3 ตารางใน 1 แถว */
   }
 
   .header,
